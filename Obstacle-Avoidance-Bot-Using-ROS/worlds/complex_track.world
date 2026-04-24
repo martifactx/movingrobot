@@ -1,0 +1,86 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <include><uri>model://sun</uri></include>
+    <include><uri>model://ground_plane</uri></include>
+
+    <model name="red_path">
+      <static>true</static>
+      
+      <link name="s1"><pose>3 0 0.001 0 0 0</pose>
+        <visual name="v1"><geometry><box><size>6 0.2 0.002</size></box></geometry>
+        <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Red</name></script></material></visual></link>
+      
+      <link name="s2"><pose>6 2 0.001 0 0 0</pose>
+        <visual name="v2"><geometry><box><size>0.2 4 0.002</size></box></geometry>
+        <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Red</name></script></material></visual></link>
+        
+      <link name="s3"><pose>8 4 0.001 0 0 0</pose>
+        <visual name="v3"><geometry><box><size>4 0.2 0.002</size></box></geometry>
+        <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Red</name></script></material></visual></link>
+
+      <link name="c1"><pose>10.77 4.10 0.001 0 0 0.26</pose>
+        <visual name="vc1"><geometry><box><size>1.7 0.2 0.002</size></box></geometry>
+        <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Red</name></script></material></visual></link>
+      <link name="c2"><pose>12.12 4.88 0.001 0 0 0.785</pose>
+        <visual name="vc2"><geometry><box><size>1.7 0.2 0.002</size></box></geometry>
+        <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Red</name></script></material></visual></link>
+      <link name="c3"><pose>12.89 6.22 0.001 0 0 1.30</pose>
+        <visual name="vc3"><geometry><box><size>1.7 0.2 0.002</size></box></geometry>
+        <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Red</name></script></material></visual></link>
+      <link name="c4"><pose>12.89 7.77 0.001 0 0 1.83</pose>
+        <visual name="vc4"><geometry><box><size>1.7 0.2 0.002</size></box></geometry>
+        <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Red</name></script></material></visual></link>
+      <link name="c5"><pose>12.12 9.12 0.001 0 0 2.35</pose>
+        <visual name="vc5"><geometry><box><size>1.7 0.2 0.002</size></box></geometry>
+        <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Red</name></script></material></visual></link>
+      <link name="c6"><pose>10.77 9.89 0.001 0 0 2.88</pose>
+        <visual name="vc6"><geometry><box><size>1.7 0.2 0.002</size></box></geometry>
+        <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Red</name></script></material></visual></link>
+
+      <link name="s4"><pose>3 10 0.001 0 0 0</pose>
+        <visual name="v4"><geometry><box><size>14 0.2 0.002</size></box></geometry>
+        <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Red</name></script></material></visual></link>
+
+      <link name="s5"><pose>-4 5 0.001 0 0 0</pose>
+        <visual name="v5"><geometry><box><size>0.2 10 0.002</size></box></geometry>
+        <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Red</name></script></material></visual></link>
+
+      <link name="s6"><pose>-2 0 0.001 0 0 0</pose>
+        <visual name="v6"><geometry><box><size>4 0.2 0.002</size></box></geometry>
+        <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Red</name></script></material></visual></link>
+    </model>
+
+    <model name="obs_start"><static>true</static><link name="l_start"><pose>3 0 0.25 0 0 0</pose>
+      <collision name="c_start"><geometry><box><size>0.5 0.5 0.5</size></box></geometry></collision>
+      <visual name="v_start"><geometry><box><size>0.5 0.5 0.5</size></box></geometry><material><ambient>0.2 0.2 0.2 1</ambient></material></visual>
+    </link></model>
+
+    <model name="obs_slalom1"><static>true</static><link name="l_s1"><pose>6 10.2 0.25 0 0 0</pose>
+      <collision name="c_s1"><geometry><box><size>0.5 0.5 0.5</size></box></geometry></collision>
+      <visual name="v_s1"><geometry><box><size>0.5 0.5 0.5</size></box></geometry><material><ambient>0 0 1 1</ambient></material></visual>
+    </link></model>
+    
+    <model name="obs_slalom2"><static>true</static><link name="l_s2"><pose>3 9.8 0.25 0 0 0</pose>
+      <collision name="c_s2"><geometry><box><size>0.5 0.5 0.5</size></box></geometry></collision>
+      <visual name="v_s2"><geometry><box><size>0.5 0.5 0.5</size></box></geometry><material><ambient>0 0 1 1</ambient></material></visual>
+    </link></model>
+
+    <model name="obs_blind"><static>true</static><link name="l_blind"><pose>-4 8 0.25 0 0 0</pose>
+      <collision name="c_blind"><geometry><box><size>0.5 0.5 0.5</size></box></geometry></collision>
+      <visual name="v_blind"><geometry><box><size>0.5 0.5 0.5</size></box></geometry><material><ambient>0.2 0.2 0.2 1</ambient></material></visual>
+    </link></model>
+
+    <model name="tunnel"><static>true</static>
+      <link name="p_left"><pose>-3.25 4 0.5 0 0 0</pose>
+        <collision name="cpl"><geometry><box><size>0.5 0.5 1.0</size></box></geometry></collision>
+        <visual name="vpl"><geometry><box><size>0.5 0.5 1.0</size></box></geometry><material><ambient>0 1 0 1</ambient></material></visual></link>
+      <link name="p_right"><pose>-4.75 4 0.5 0 0 0</pose>
+        <collision name="cpr"><geometry><box><size>0.5 0.5 1.0</size></box></geometry></collision>
+        <visual name="vpr"><geometry><box><size>0.5 0.5 1.0</size></box></geometry><material><ambient>0 1 0 1</ambient></material></visual></link>
+      <link name="roof"><pose>-4 4 1.1 0 0 0</pose>
+        <visual name="vroof"><geometry><box><size>2.0 0.5 0.2</size></box></geometry><material><ambient>0 1 0 1</ambient></material></visual></link>
+    </model>
+
+  </world>
+</sdf>
