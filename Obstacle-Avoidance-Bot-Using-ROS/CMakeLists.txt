@@ -113,9 +113,9 @@ catkin_package(
 ## Build ##
 ###########
 
-add_executable(obstacle_avoidance src/scripts/obstacle_avoidance.cpp)
+## add_executable(obstacle_avoidance src/scripts/obstacle_avoidance.cpp)
 
-target_link_libraries(obstacle_avoidance ${catkin_LIBRARIES})
+## target_link_libraries(obstacle_avoidance ${catkin_LIBRARIES})
 
 
 
