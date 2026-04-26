@@ -5,10 +5,14 @@
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
   </include>
 
   <param command="$(find xacro)/xacro '$(find m2wr_description)/urdf/bot_description.xacro'" name="robot_description"/>
 
   <node name="mybot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
         args="-urdf -param robot_description -model m2wr -x 0 -y 0 -z 0.1" />
+
+  <node name="hybrid_navigator_node" pkg="m2wr_description" type="hybrid_navigation.py" output="screen" />
 </launch>
